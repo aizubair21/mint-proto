@@ -1,0 +1,120 @@
+/* mulish font */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Mulish:wght@300;600;900&display=swap');
+
+
+/* plugina customize begain */
+#side-menu .close {
+    padding: 4px;
+	border: none;
+}
+
+/* plugina customize end */
+
+/* default css  */
+:root{
+    --brand:rgb(255,79,0);
+    --secondary:rgb(191,191,191);
+    --dark:rgb(0,0,0);
+    --light:rgb(255,255,255);
+    --gray:rgb(100, 100, 100);
+    --time:.3s;
+    --border:1px;
+}
+.bg-primary {
+    background-color: var(--brand);
+}
+.hidden {
+    display: none;
+}
+.show {
+    display: block;
+}
+.border{
+    border: var(--border) solid var(--dark);
+}
+
+h1, h2 {
+    font-family: 'Mulish', sans-serif;
+    font-weight:900;
+    font-size: 50px;
+}
+* {
+    font-family: 'Mulish',sans-serif;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body, html {
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* default css end */
+
+/* common style begain */
+.style-button {
+    border: none;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: var(--brand);
+    font-size: 20px;
+    color: white;
+    font-weight: 900;
+    margin: 20px 0px;
+    font-family: 'mulish', sans-serif;
+}
+.style-button:hover {
+    background-color: var(--secondary);
+}
+
+.common-heading {
+    width: 10px auto;
+    text-align: center;
+    font-family: 'Mulish', sans-serif;
+    font-size: 45px;
+    font-weight: 900;
+    padding: 10px 0px;
+}
+.section {
+    padding: 20px 0px;
+    margin: 10px 0px;
+}
+
+/* common style end */
+
+
+#banner {
+    background-color: rgba(173, 172, 172, 0.1);
+}
+#banner .banner-body {
+    padding: 40px 0px;
+    border: 1px solid;
+}
+#banner .banner-body .left{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+#banner .banner-body .left .img{}
+#banner .banner-body .left .img img{
+    width: 100%;
+}
+#banner .banner-body .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#banner .banner-body .right h1 {
+    line-height: 40px;
+}

@@ -1,17 +1,3 @@
-/**
-* Awesome website
-* @author YOUR_NAME_HERE
-* @version 0.1
-*/
-
-/* ============================ RESET ============================ */
-
-/* ===== Eric Meyer Reset ===== */
-
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -59,20 +45,9 @@ table {
 
 /* ===== CUSTOM RESET ===== */
 
-object{outline:none; display:block; overflow:hidden} /* force redraw on IE8, fix outline/scroll bug on Firefox 3.6, remove unnecessary margin (copied from swffit)  */
-textarea{overflow:auto} /* fix IE */
-iframe{border:0}
-
-/* fix line-height [https://gist.github.com/413930] */
-sup, sub{line-height:0; font-size:.75em; position:relative; vertical-align:baseline}
-sup{top:-0.5em}
-sub{bottom:-0.25em}
 
 
 /* ========================= GENERAL TAGS ======================== */
-
-html{font-family:Arial, Helvetica, sans-serif; overflow-y:scroll; min-width:1000px}
-body{background-color:#fff; color:#444; font-size:12px; line-height:1.5em}
 
 h1, h2, h3, h4, h5, h6{font-weight:bold; line-height:1em}
 h1, .h1{font-size:2em}
@@ -127,7 +102,7 @@ blockquote{padding:0.2em 1em 0.2em 2em; border-left:3px solid #eee}
 .col-3_5{width:60%}
 .col-4_5{width:80%}
 .col-1_6{width:16.66667%}
-.col-5_6{width:83.33333%}
+.col-5_6{width:83.33333%} */
 
 
 /* -- image -- */
@@ -252,15 +227,14 @@ ul.simpleList{list-style:disc}
 
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
-html {
-	overflow: hidden;
-}
+
 * {
   margin: 0;
   padding: 0;
   text-align: 0;
+  box-sizing: border-box;
 }
 ul {
   padding: 0;
@@ -275,15 +249,6 @@ a {
 p {
   padding: 0;
   margin: 0;
-}
-
-
-.green {
-	color: green;
-}
-
-.s-blue {
-	color: skyblue;
 }
 
 /* ============================ DEBUG ============================ */
