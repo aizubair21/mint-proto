@@ -1,6 +1,7 @@
 /* mulish font */
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Mulish:wght@300;600;900&display=swap');
-
+/* roboto font  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 /* plugina customize begain */
 #side-menu .close {
@@ -32,11 +33,18 @@
 .border{
     border: var(--border) solid var(--dark);
 }
+.brand {
+    color: var(--brand);
+}
 
 h1, h2 {
     font-family: 'Mulish', sans-serif;
     font-weight:900;
     font-size: 50px;
+}
+p, span, div {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
 }
 * {
     font-family: 'Mulish',sans-serif;
@@ -63,6 +71,11 @@ a{
 /* default css end */
 
 /* common style begain */
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .style-button {
     border: none;
     padding: 10px;
@@ -79,26 +92,113 @@ a{
 }
 
 .common-heading {
-    width: 10px auto;
+    max-width: 250px;
+    margin: 0 auto;
     text-align: center;
     font-family: 'Mulish', sans-serif;
     font-size: 45px;
     font-weight: 900;
     padding: 10px 0px;
+    color: var(--dark);
+    position: relative;
+}
+.common-heading::after {
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    left: 0px;
+    width: 70px;
+    height: 5px;
+    background-color: var(--brand);
+}
+.common-heading::before {
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    left: 0px;
+    width: 5px;
+    height: 25px;
+    background-color: var(--brand);
 }
 .section {
     padding: 20px 0px;
     margin: 10px 0px;
 }
 
+
+.corner-style {
+    position: relative;
+    transition: all linear .3s;
+}
+.corner-style:hover span:nth-child(1){
+    left: -20px;
+    top: -20px;
+    transition: all linear .3s;
+}
+.corner-style:hover span:nth-child(2){
+    left: -20px;
+    top: -20px;
+    transition: all linear .3s;
+}
+.corner-style:hover span:nth-child(3){
+    right: -20px;
+    bottom: -20px;
+    transition: all linear .3s;
+}
+.corner-style:hover span:nth-child(4){
+    right: -20px;
+    bottom: -20px;
+    transition: all linear .3s;
+}
+.corner-style span{
+    position: absolute;
+    background-color: var(--brand);
+    border-radius: 10px;;
+    transition: all linear .3s;
+
+}
+.corner-style span:nth-child(1){
+    left: 20px;
+    top: 20px;
+    width: 100px;
+    height: 8px;
+    
+}
+.corner-style span:nth-child(2){
+    left: 20px;
+    top: 20px;
+    height: 100px;
+    width: 8px;
+    
+}
+.corner-style span:nth-child(3){
+    right: 20px;
+    bottom: 20px;
+    height: 100px;
+    width: 8px;
+    
+}
+.corner-style span:nth-child(4){
+    right: 20px;
+    bottom: 20px;
+    width: 100px;
+    height: 8px;
+    
+}
+
 /* common style end */
 
 
 #banner {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
     background-color: rgba(173, 172, 172, 0.1);
 }
 #banner .banner-body {
-    padding: 40px 0px;
+    padding: 80px 0px;
     border: 1px solid;
 }
 #banner .banner-body .left{
@@ -106,7 +206,16 @@ a{
     justify-content:center;
     align-items:center;
 }
-#banner .banner-body .left .img{}
+#banner .banner-body .left .img{
+    /* border: 1px solid black; */
+    width: 500px;
+    border-radius: 50px;
+    background: #dedede;
+    box-shadow:  20px 20px 60px #bdbdbd,
+             -20px -20px 60px #ffffff;
+
+}
+
 #banner .banner-body .left .img img{
     width: 100%;
 }
@@ -114,7 +223,37 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px 0px;
 }
 #banner .banner-body .right h1 {
-    line-height: 40px;
+    line-height: 45px;
+    text-transform: capitalize;
+    opacity: .7;
 }
+#banner .banner-body .right p {
+    font-size: 18px;
+    padding: 8px 0px;
+    line-height: 25px;
+    display: none;
+}
+
+/* banner end */
+
+
+/* about us begain  */
+#about {}
+#about .about-body{
+    padding: 20px;
+    border: 1px solid;
+}
+#about .about-body .left{}
+#about .about-body .left .img{}
+#about .about-body .left .img img{}
+#about .about-body .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    padding: 40px;
+}
+/* about us end */
