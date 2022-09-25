@@ -68,6 +68,9 @@ a{
     text-decoration: none;
     color: black;
 }
+img{
+    width: 100%;
+}
 /* default css end */
 
 /* common style begain */
@@ -78,7 +81,7 @@ a{
 }
 .style-button {
     border: none;
-    padding: 10px;
+    padding: 10px 25px;
     border-radius: 25px;
     background-color: var(--brand);
     font-size: 20px;
@@ -86,11 +89,21 @@ a{
     font-weight: 900;
     margin: 20px 0px;
     font-family: 'mulish', sans-serif;
+    border: 1px solid var(--brand);
 }
 .style-button:hover {
-    background-color: var(--secondary);
+    background-color: transparent;
+    color: var(--brand);
 }
+.has-shadow {
 
+}
+.has-shadow-hover:hover {
+    border-radius: 50px;
+background: #dedede;
+box-shadow:  20px 20px 60px #bdbdbd,
+             -20px -20px 60px #ffffff;
+}
 .common-heading {
     max-width: 250px;
     margin: 0 auto;
@@ -241,19 +254,50 @@ a{
 
 
 /* about us begain  */
-#about {}
+#about {
+    background-color: var(--secondary);
+}
 #about .about-body{
     padding: 20px;
-    border: 1px solid;
+    /* border: 1px solid; */
+    
 }
-#about .about-body .left{}
-#about .about-body .left .img{}
-#about .about-body .left .img img{}
+#about .about-body .left{
+    display: flex;
+    justify-content: center;;
+    align-items: center;
+}
+#about .about-body .left .img{
+    width: 400px;
+}
+#about .about-body .left .img .corner-style {
+    transform: rotate(90deg);
+}
+#about .about-body .left .img img{
+
+}
 #about .about-body .right{
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: flex-start;
     padding: 40px;
+background: #dedede;
+box-shadow:  20px 20px 60px #bdbdbd,
+             -20px -20px 60px #ffffff;
+}
+#about .about-body .right {}
+#about .about-body .right .info-table{}
+#about .about-body .right .info-table .info-table-item{
+    margin-bottom:20px;
+}
+#about .about-body .right .info-table .item-name {
+    text-transform: capitalize;
+    font-weight: 600;
+    color: var(--brand);
+}
+#about .about-body .right .info-table .item-desc {
+    width: 100%;;
+    border-bottom: 1px solid var(--brand);
 }
 /* about us end */
