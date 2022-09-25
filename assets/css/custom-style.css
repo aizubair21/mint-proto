@@ -115,7 +115,7 @@ box-shadow:  20px 20px 60px #bdbdbd,
     color: var(--dark);
     position: relative;
 }
-.common-heading::after {
+/* .common-heading::after {
     content: "";
     position: absolute;
     bottom: 15px;
@@ -132,7 +132,7 @@ box-shadow:  20px 20px 60px #bdbdbd,
     width: 5px;
     height: 25px;
     background-color: var(--brand);
-}
+} */
 .section {
     padding: 20px 0px;
     margin: 10px 0px;
@@ -212,7 +212,7 @@ box-shadow:  20px 20px 60px #bdbdbd,
 }
 #banner .banner-body {
     padding: 80px 0px;
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 #banner .banner-body .left{
     display: flex;
@@ -259,6 +259,7 @@ box-shadow:  20px 20px 60px #bdbdbd,
 }
 #about .about-body{
     padding: 20px;
+    padding-bottom: 60px;
     /* border: 1px solid; */
     
 }
@@ -271,7 +272,6 @@ box-shadow:  20px 20px 60px #bdbdbd,
     width: 400px;
 }
 #about .about-body .left .img .corner-style {
-    transform: rotate(90deg);
 }
 #about .about-body .left .img img{
 
@@ -282,14 +282,14 @@ box-shadow:  20px 20px 60px #bdbdbd,
     justify-content: start;
     align-items: flex-start;
     padding: 40px;
-background: #dedede;
-box-shadow:  20px 20px 60px #bdbdbd,
-             -20px -20px 60px #ffffff;
+    background:var(--light)
 }
-#about .about-body .right {}
-#about .about-body .right .info-table{}
+#about .about-body .right .info-table{
+    margin-top: 5px;
+}
 #about .about-body .right .info-table .info-table-item{
     margin-bottom:20px;
+    width: 40%;
 }
 #about .about-body .right .info-table .item-name {
     text-transform: capitalize;
@@ -301,3 +301,69 @@ box-shadow:  20px 20px 60px #bdbdbd,
     border-bottom: 1px solid var(--brand);
 }
 /* about us end */
+
+
+/* service begain  */
+#service {
+    background-color: var(--brand);
+}
+#service .service-body {
+    text-align: center;
+    /* border: 1px solid; */
+    padding: 20px 70px 70px 70px;
+}
+#service .service-body .service-item{
+
+}
+#service .service-body .service-item .service-item-body{
+    border: 1px solid;
+    position: relative;
+    border-radius: 50px;
+    padding: 40px 0px;
+    border: 1px solid var(--light);
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    background-color: var(--light);
+}
+#service .service-body .service-item .service-item-body:hover .top-bellow{
+    background-color: var(--light);
+    /* box-shadow: 10px 10px 20px #dbdbdb; */
+}
+#service .service-body .service-item .service-item-body:hover .item-top{
+    background-color: var(--brand);
+    color: var(--light);
+}
+#service .service-body .service-item .service-item-body:hover{
+    background-color: var(--brand);
+    color: var(--light);
+}
+#service .service-body .service-item .service-item-body .top-bellow{
+    background-color: var(--light);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.item-top {
+    border: 1px solid var(--light);
+    font-size: 25px;
+    font-family: "Muslish", sans-serif;
+    font-weight: 900;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    background-color: var(--brand);
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+}
+
+/* service end */
