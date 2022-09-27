@@ -209,6 +209,22 @@ box-shadow:  20px 20px 60px #bdbdbd,
     align-items: center;
     height: 90vh;
     background-color: rgba(173, 172, 172, 0.1);
+    position: relative;
+    z-index: 2;
+}
+#banner::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/back_our/20190622/ourmid/pngtree-blue-tech-particle-banner-background-image_209837.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotate(180deg);
+    z-index: -1;;
 }
 #banner .banner-body {
     padding: 80px 0px;
@@ -218,19 +234,84 @@ box-shadow:  20px 20px 60px #bdbdbd,
     display: flex;
     justify-content:center;
     align-items:center;
+    perspective:1000px;
+    position: relative;
+}
+#banner .banner-body .left::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff0e;
+    transform-style: preserve-3d;
+    transform:rotateY(-30deg);
+    transition: all linear .3s;
+}
+#banner .banner-body .left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -25%;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff0e;
+    transform-style: preserve-3d;
+    transform:rotateX(-55deg);
+    display: none;
 }
 #banner .banner-body .left .img{
     /* border: 1px solid black; */
-    width: 500px;
-    border-radius: 50px;
-    background: #dedede;
-    box-shadow:  20px 20px 60px #bdbdbd,
-             -20px -20px 60px #ffffff;
-
+    width: 400px;
+    background: transparent;
+    /* box-shadow:  20px 20px 60px #bdbdbd, */
+             /* -20px -20px 60px #ffffff; */
+    /* overflow: hidden; */
+    perspective:1000px;
+    position: relative;
+    /* margin-left: 20px; */
 }
 
-#banner .banner-body .left .img img{
+#banner .banner-body .left .img span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-color: #ffffff0e;
+    z-index: -1;
+    border-radius: 8px;
+    transform-style: preserve-3d;
+    transform: rotateY(40deg);
+    transition: all linear .3s;
+}
+#banner .banner-body .left:hover .img span:nth-child(1){
+    transform: rotateY(0deg) scale(1.1);
+    transition: all linear .3s;
+    background-color: var(--brand);
+
+}
+#banner .banner-body .left:hover .img img{
+    transform: rotateY(0deg);
+    margin-left: 0px;
+    transition: all linear .3s;
+    box-shadow: 0px 0px 20px var(--gray);
+}
+#banner .banner-body .left:hover::after {
+    width: 0px;
+    transition: all linear .3s;
+}
+#banner .banner-body .left .img img{
+    /* width: 100%; */
+    /* border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%; */
+    transition: trnasform 1s;
+    transform-style: preserve-3d;
+    transform: rotateY(45deg);
+    margin-left: 50px;
+    border-radius: 8px;
+    transition: all linear .3s;
 }
 #banner .banner-body .right{
     display: flex;
@@ -239,9 +320,10 @@ box-shadow:  20px 20px 60px #bdbdbd,
     padding: 10px 0px;
 }
 #banner .banner-body .right h1 {
-    line-height: 45px;
+    line-height: 50px;
     text-transform: capitalize;
     opacity: .7;
+    color:var(--light)
 }
 #banner .banner-body .right p {
     font-size: 18px;
@@ -307,6 +389,13 @@ box-shadow:  20px 20px 60px #bdbdbd,
 #service {
     background-color: var(--brand);
 }
+#service .common-heading {
+    color: var(--light);
+}
+#service p {
+    color: var(--light);
+    font-size: 18px;
+}
 #service .service-body {
     text-align: center;
     /* border: 1px solid; */
@@ -367,3 +456,109 @@ box-shadow:  20px 20px 60px #bdbdbd,
 }
 
 /* service end */
+
+
+/* my work begain  */
+#portfollio {
+    padding: 50px 0px;
+}
+#portfollio .portfollio-body{}
+#portfollio .portfollio-body{}
+#portfollio .portfollio-body .filter-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+#portfollio .portfollio-body .filter-nav .row .nav-item:first-child {
+}
+#portfollio .portfollio-body .filter-nav .nav-item{
+    width: 130px;
+    /* border: 1px solid var(--dark); */
+    text-align: center;
+    padding: 5px;
+    margin: 6px 2px;
+    font-weight: 600;
+    font-family: "Mulish",sans-serif;
+    cursor: pointer;
+    border: 1px solid var(--brand);
+    border-radius: 25px;
+}
+#portfollio .portfollio-body .filter-nav .nav-item:hover {
+    background-color: var(--brand);
+    border: 1px solid var(--brand);
+    color: var(--light);
+}
+.nav-item-active {
+    background-color: var(--brand);
+    color: var(--light);
+    font-weight: 900;
+    position:relative;
+}
+.nav-item-active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    width: 20px;
+    height: 20px;
+    border-style: solid;
+    border-width: 8px;
+    border-color: transparent var(--brand) var(--brand) transparent;
+}
+
+
+#portfollio .portfollio-body .filter-content{
+    padding:40px;
+    /* background-color: #bdbdbd; */
+}
+#portfollio .portfollio-body .filter-content .row {
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+#portfollio .portfollio-body .filter-content .row .content-item {
+    margin:2px px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid var(--brand);
+    box-sizing: border-box;
+}
+
+        /* on hover */
+#portfollio .portfollio-body .filter-content .row .content-item:hover {
+    transform: rotateY(180deg);
+    
+}
+#portfollio .portfollio-body .filter-content .row .content-item:hover img {
+    transform: scale(1.3);
+    transition: all linear var(--time);
+    
+}
+
+#portfollio .portfollio-body .filter-content .row .content-item img{
+    transition: all linear var(--time);
+
+}
+#portfollio .portfollio-body .filter-content .row .content-item .item-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--brand);
+    transition: all linear .4s;
+    opacity: 0;
+    z-index: 1;
+    transform: rotateY(-180deg);
+}
+#portfollio .portfollio-body .filter-content .row .content-item:hover .item-overlay {
+    opacity: 1;
+}
+#portfollio .portfollio-body .filter-content .row .content-item {}
+/* my work end */
