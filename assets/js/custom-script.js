@@ -25,10 +25,10 @@ $(document).ready(
 
 
     //countup animation plugins
-    $("#countupOne").countMe(150,90),
-    $("#countupTwo").countMe(100,150),
-    $("#countupThree").countMe(100,50),
-    $("#countupFour").countMe(100,120),
+    $("#countupOne").countMe(20,50),
+    $("#countupTwo").countMe(100,100),
+    $("#countupThree").countMe(20,100),
+    $("#countupFour").countMe(100,200),
 
 
     //magnific popup

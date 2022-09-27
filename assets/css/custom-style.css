@@ -73,7 +73,49 @@ img{
 }
 /* default css end */
 
+
+
 /* common style begain */
+.corner-style-fixed {
+    position: relative;
+}
+.corner-style-fixed::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 80px;
+    height: 80px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--brand) transparent transparent var(--brand);
+    transition: all linear .3s;
+
+}
+.corner-style-fixed::before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 80px;
+    height: 80px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: transparent var(--brand) var(--brand) transparent ;
+    transition: all linear .3s;
+    /* border-radius: ;/ */
+}
+
+.corner-style-fixed:hover ::after{
+    width: 45px;
+    height: 45px;
+    transition: all linear .3s;
+}
+.corner-style-fixed:hover ::before{
+    width: 45px;
+    height: 45px;
+    transition: all linear .3s;
+}
 .center{
     display: flex;
     justify-content: center;
@@ -292,6 +334,24 @@ box-shadow:  20px 20px 60px #bdbdbd,
     background-color: var(--brand);
 
 }
+
+#banner .banner-body .left .img span:nth-child(2){
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 200px;
+    background-color: var(--light);
+    border-radius: 25px;   
+    transition: all linear .3s;
+}
+#banner .banner-body .left:hover .img span:nth-child(2){
+    /* z-index: 2; */
+    width: 480px;
+    transition: all linear .3s;
+}
 #banner .banner-body .left:hover .img img{
     transform: rotateY(0deg);
     margin-left: 0px;
@@ -350,14 +410,53 @@ box-shadow:  20px 20px 60px #bdbdbd,
     justify-content: center;;
     align-items: center;
 }
-#about .about-body .left .img{
+#about .about-body .left .img {
     width: 400px;
+    position: relative;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    overflow: hidden;;
 }
-#about .about-body .left .img .corner-style {
+#about .about-body .left .img::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: var(--brand) transparent transparent var(--brand);
+    transition: all linear .3s;
+    z-index: 9;
+    /* background-color: var(--brand); */
+}
+#about .about-body .left .img::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: transparent var(--brand) var(--brand) transparent;
+    transition: all linear .3s;
+    z-index: 9;
+    /* background-color: var(--brand); */
+}
+#about .about-body .left .img:hover::after{
+    width: 100px;
+    height: 100px;;
+}
+#about .about-body .left .img:hover::before{
+    width: 100px;
+    height: 100px;;
 }
 #about .about-body .left .img img{
-
+    position: relative
 }
+/* #about .about-body .left .img img{} */
 #about .about-body .right{
     display: flex;
     flex-direction: column;
@@ -418,9 +517,7 @@ box-shadow:  20px 20px 60px #bdbdbd,
     /* border: 1px solid; */
     padding: 20px 70px 70px 70px;
 }
-#service .service-body .service-item{
-
-}
+/* #service .service-body .service-item{} */
 #service .service-body .service-item .service-item-body{
     border: 1px solid;
     position: relative;
@@ -490,6 +587,7 @@ box-shadow:  20px 20px 60px #bdbdbd,
     position: relative;
     perspective: 1000px;
     z-index: 1;
+    background-color: var(--light);
 }
 #service #frequent-work .frequent-work-body .inner .left{
     /* border: 1px solid var(--light); */
@@ -500,64 +598,32 @@ box-shadow:  20px 20px 60px #bdbdbd,
     /* border-radius: 50%; */
     width: 80px;
     height: 80px;;
-    font-size: 25px;
+    font-size: 45px;
     font-weight: 900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     /* box-shadow: 0px 0px 25px var(--light); */
-    background-color: var(--brand);
+    /* background-color: var(--brand); */
     display: flex;
     justify-content: center;
     align-items: center;;
     margin: 0 auto;
     position: relative;
     z-index: 1;
-    color: var(--light);
+    color: var(--brand);
+    border-bottom: 2px solid var(--brand);
 }
-#service #frequent-work .frequent-work-body .inner .left::after {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 25px;
-    height: 25px;
-    border-style: solid;
-    border-width: 3px;
-    border-color: var(--light) transparent transparent var(--light);
-    transition: all linear .3s;
-}
-#service #frequent-work .frequent-work-body .inner .left::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 25px;
-    height: 25px;
-    border-style: solid;
-    border-width: 3px;
-    border-color: var(--light) var(--light)transparent transparent ;
-    transition: all linear .3s;
-    /* border-radius: ; */
-}
-#service #frequent-work .frequent-work-body .inner:hover .left::after{
-    width: 45px;
-    height: 45px;
-    transition: all linear .3s;
-}
-#service #frequent-work .frequent-work-body .inner:hover .left::before{
-    width: 45px;
-    height: 45px;
-    transition: all linear .3s;
-}
+
 #service #frequent-work .frequent-work-body .inner .right{
     /* border: 1px solid; */
     padding: 20px 10px;
     font-size: 20px;
     font-weight: 700;
-    background-color: var(--light);
+    /* background-color: var(--light); */
     text-transform: capitalize;
     transition: transform .3s;
     transform-style: preserve-3d;
     /* transform: rotateY(-40deg); */
-    border-radius: 25px;
+    /* border-radius: 25px; */
     /* border-top-right-radius: 25px;
     border-bottom-left-radius: 25px; */
 
@@ -681,3 +747,101 @@ box-shadow:  20px 20px 60px #bdbdbd,
 }
 #portfollio .portfollio-body .filter-content .row .content-item {}
 /* my work end */
+
+
+
+
+/* footer begain  */
+footer {
+    position: relative;
+    z-index: 1;
+    padding: 50px 0px;
+}
+footer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gray);
+    z-index: -1;
+    opacity: .5;
+}
+footer .footer-body{}
+footer .footer-body .left{
+    /* border: 2px solid rgb(194, 192, 192); */
+    padding: 20px;
+    margin-bottom:5px;
+    background-color: var(--light);
+}
+footer .footer-body .left p, .right p{
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--brand);
+}
+footer .footer-body .left input, textarea {
+    font-family: "Mulish", sans-serif;
+    color: var(--brand);
+}
+footer .footer-body .left input:focus {
+    border: 1px solid var(--brand);
+    outline: none;
+    box-shadow: none;
+}
+footer .footer-body .left textarea:focus {
+    border: 1px solid var(--brand);
+    outline: none;
+    box-shadow: none;
+}
+footer .footer-body .left button {
+    border: 1px solid var(--brand);
+    padding: 10px 15px;
+    background:var(--brand);
+    color: var(--light);
+    width: 170px;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: "Mulish", sans-serif;
+}
+footer .footer-body .left {}
+footer .footer-body .right{
+    border: 2px solid var(--light);
+    padding: 20px;
+    margin-bottom:5px;
+}
+footer .footer-body .right p {
+    color: var(--light);
+}
+footer .footer-body .right .icon {
+    padding: 15px;
+    border-right: 1px solid var(--brand);
+    font-size: 25px;
+    color: var(--gray);
+    margin: 10px;
+}
+footer .footer-body .footer-content-right {
+    background-color: var(--light);
+    margin-bottom: 18px;
+}
+footer .footer-body .desc-name {
+    padding: 8px 0px;
+    font-weight: 900;
+}
+footer .footer-body .footer-content-right::after {
+    width: 20px;
+    height: 20px;
+}
+footer .footer-body .footer-content-right::before {
+    width: 20px;
+    height: 20px;
+}
+footer .footer-body .footer-content-right:hover::after {
+    width: 45px;
+    height: 45px;
+}
+footer .footer-body .footer-content-right:hover::before {
+    width: 45px;
+    height: 45px;
+}
+/* footer end */
