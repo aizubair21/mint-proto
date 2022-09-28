@@ -195,7 +195,7 @@
                             <!-- info table end   -->
 
                             <!-- contact button  -->
-                            <button class="style-button">contact ME</button>
+                            <button class="style-button popup-contact">contact ME</button>
                         </div>
                     </div>
 
@@ -394,7 +394,9 @@
                                     
                                 </div>
                                 <div>
-                                    Responsive Web
+                                    <span>
+                                        Responsive Website
+                                    </span>
                                     <button class="button">Knock ME</button>
                                 </div>
                             </div>
@@ -474,7 +476,7 @@
                                 <div>
                                     PHP Application
                                     
-                                    <button class="button">Knock ME</button>
+                                    <button class="button" onclick="window.alert('get')">Knock ME</button>
                                 </div>
                             </div>
                         </div>
@@ -850,7 +852,7 @@
                                 </p>
                                 <form action="#" method="post">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <input type="text" name="sender-name" id="sender_name" required placeholder="Your Name .." class="form-control">
+                                        <input type="text" name="sender-name" id="sender_email" required placeholder="Your Name .." class="form-control">
                                         <input type="enail" name="sender-name" id="sender_name" required placeholder="Your Email .." class="form-control">
                                     </div>
                                     <div class="my-2">
@@ -922,6 +924,43 @@
         <!-- footer end -->
 
     </div>
+
+
+
+
+    <!-- contact popup begain -->
+    <div id="contact-popup">
+        <div class="popup-wrapper" onclick="this.parentElement.style.top = '-200%'"></div>
+        <div class="popup-body">
+            <div class="popup-image">
+                <img src="assets/img/avatar.jpg" alt="IMAGE">
+            </div>
+            <div class="popup-contact">
+                <div class="w-100 p-3 bg-success my-2 text-light text-center">
+                    Contact ME
+                </div>
+                <form action="#" method="post">
+                    <div class="d-flex justify-content-between">
+                        <div>
+                            <input type="text" name="sender_name" id="sender_name" placeholder="Your Name..." class="form-control">
+                        </div>
+                        <div>
+                            
+                            <input type="email" name="sender_email" id="sender_email" placeholder="Your Email..." class="form-control">
+                        </div>
+                    </div>
+                    <div class="my-3">
+                        <input type="text" name="sender_subject" id="sender_subject" placeholder="What You Want To Do.." class="form-control">
+                    </div>
+                    <div>
+                        <textarea name="sender_message" id="sender_message" cols="30" rows="10" class="form-control" placeholder="Message.........."></textarea>
+                    </div>
+                    <button class="btn btn-success btn-sm mt-2">send to ME</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- contact popup end -->
 
 
 

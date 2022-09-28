@@ -47,7 +47,7 @@ $(document).ready(
         nav:true,
         responsive: {
             0: {
-                items: 2,
+                items: 1,
                 nav: true
             },
             600: {
@@ -55,11 +55,17 @@ $(document).ready(
                 nav: false
             },
             1000: {
-                items: 3,
+                items: 4,
                 nav: true,
                 loop: false
             }
         }
     }),
+
+
+    // open opoup contact 
+    $(".popup-contact").on("click", ()=>{
+        $("#contact-popup").css('top',0);
+    })
 
 )
