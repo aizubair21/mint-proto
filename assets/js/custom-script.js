@@ -39,12 +39,12 @@ $(document).ready(
 
 
     //service carousel sliler
-    $(".owl-carousel").owlCarousel({
-        // center:true,
+    $(".testimonial-element").owlCarousel({
+        // center: true,
         loop: true,
         margin: 10,
         responsiveClass: true,
-        nav:true,
+        nav: true,
         responsive: {
             0: {
                 items: 1,
@@ -64,8 +64,9 @@ $(document).ready(
 
 
     // open opoup contact 
-    $(".popup-contact").on("click", ()=>{
-        $("#contact-popup").css('top','0');
-    })
+    $(".popup-contact").on("click", () => {
+        $("#contact-popup").css('left', '0');
+    }),
+
 
 )
