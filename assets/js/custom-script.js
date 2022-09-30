@@ -65,7 +65,7 @@ $(document).ready(
 
     // open opoup contact 
     $(".popup-contact").on("click", ()=>{
-        $("#contact-popup").css('top',0);
+        $("#contact-popup").css('top','0');
     })
 
 )
